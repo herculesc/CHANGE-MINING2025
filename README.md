@@ -7,6 +7,13 @@
 
 **CHANGE-MINING2025** é uma base de dados desenvolvida para tarefas de detecção de mudanças em áreas de mineração, com foco em aplicações de sensoriamento remoto e aprendizado profundo.
 
+## 📦 Download
+
+Você pode acessar e baixar a base de dados pelo link abaixo:
+
+🔗 [Clique aqui para fazer o download da base CHANGE-MINING2025](https://drive.google.com/drive/folders/1QcCsCtugA8Gv_HTcdKiE7ePBfu21Ko7R?usp=sharing)
+
+
 ## 📂 Descrição da Base
 
 A base é composta por imagens multitemporais provenientes do satélite Sentinel-2 e máscaras binárias que indicam as regiões onde ocorreram mudanças relacionadas à atividade mineradora. Cada amostra contém:
