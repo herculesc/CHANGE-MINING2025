@@ -16,18 +16,23 @@ Você pode acessar e baixar a base de dados pelo link abaixo:
 
 ## 📂 Descrição da Base
 
-A base é composta por imagens multitemporais provenientes do satélite Sentinel-2 e máscaras binárias que indicam as regiões onde ocorreram mudanças relacionadas à atividade mineradora. Cada amostra contém:
+A base é composta por pares bitemporais de imagens Sentinel-2, adquiridos em dois instantes de tempo distintos, com resolução espacial de 10 metros. As imagens são acompanhadas de máscaras binárias que indicam as regiões onde ocorreram mudanças associadas à atividade mineradora. Cada amostra contém:
 
 - Uma imagem no tempo **T1** (ano de **2017**)
 - Uma imagem no tempo **T2** (ano de **2024**)
 - Uma **máscara binária de mudança**
 
-### 🗂️ Estrutura de Diretórios
+## Estrutura da Base de Dados
 
-CHANGE-MINING2025/
-├── T1/ # Imagens do tempo inicial (2017)
-├── T2/ # Imagens do tempo final (2024)
-└── Mudança/ # Máscaras binárias de mudança (0 = sem mudança, 1 = mudança)
+A base de dados `CHANGE-MINING2025` está organizada da seguinte forma:
+
+
+Cada amostra é composta por um par de imagens multiespectrais Sentinel-2 com resolução espacial de **10 metros**, capturadas em dois instantes distintos (**T1** e **T2**), além de uma **máscara binária** que identifica as áreas com indícios de **atividade mineradora** ao longo do tempo.
+
+📁 **T1/**: Contém as imagens do primeiro instante de tempo (2017)  
+📁 **T2/**: Contém as imagens do segundo instante de tempo (2024)  
+📁 **Mudança/**: Máscaras binárias de referência (0 = sem mudança, 1 = mudança)
+
 
 
 ### 🛠️ Processo de Criação
@@ -48,7 +53,6 @@ O processo de elaboração da base envolveu as seguintes etapas:
 A base de dados CHANGE-MINING2025 é ideal para:
 
 - Modelos de **detecção de mudanças** com redes neurais profundas
-- **Monitoramento ambiental** de áreas mineradas
 - Estudos de **uso e ocupação do solo** com foco em mineração
 
 ---
