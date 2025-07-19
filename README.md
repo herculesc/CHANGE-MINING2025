@@ -1,5 +1,6 @@
 # CHANGE-MINING2025
 
+![Logo CHANGE-MINING2025][imagem/20250719_1447_Logo CHANGE-MINING2025_simple_compose_01k0hwnqxre78sp04cw5pqkehk.png]
 **CHANGE-MINING2025** é uma base de dados desenvolvida para tarefas de detecção de mudanças em áreas de mineração, com foco em aplicações de sensoriamento remoto e aprendizado profundo.
 
 ## 📂 Descrição da Base
