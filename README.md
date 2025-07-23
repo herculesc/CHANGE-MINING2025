@@ -1,60 +1,55 @@
 # CHANGE-MINING2025
 
 <p align="center">
-  <img src="imagem/20250719_1447_Logo CHANGE-MINING2025_simple_compose_01k0hwnqxre78sp04cw5pqkehk.png" alt="Logo CHANGE-MINING2025" width="250"/>
+  <img src="imagem/20250719_1447_Logo CHANGE-MINING2025_simple_compose_01k0hwnqxre78sp04cw5pqkehk.png" alt="CHANGE-MINING2025 Logo" width="250"/>
 </p>
 
-
-**CHANGE-MINING2025** é uma base de dados desenvolvida para tarefas de detecção de mudanças em áreas de mineração, com foco em aplicações de sensoriamento remoto e aprendizado profundo.
+**CHANGE-MINING2025** is a dataset developed for **change detection tasks in mining areas**, focusing on **remote sensing** and **deep learning** applications.
 
 ## 📦 Download
 
-Você pode acessar e baixar a base de dados pelo link abaixo:
+You can access and download the dataset via the link below:
 
-🔗 [Clique aqui para fazer o download da base CHANGE-MINING2025](https://drive.google.com/drive/folders/1QcCsCtugA8Gv_HTcdKiE7ePBfu21Ko7R?usp=sharing)
+🔗 [Click here to download the CHANGE-MINING2025 dataset](https://drive.google.com/drive/folders/1QcCsCtugA8Gv_HTcdKiE7ePBfu21Ko7R?usp=sharing)
 
+## 📂 Dataset Description
 
-## 📂 Descrição da Base
+The dataset consists of **bi-temporal Sentinel-2 image pairs** acquired at two distinct time points, with a **spatial resolution of 10 meters**. Each image pair is accompanied by a **binary change mask** indicating regions where mining-related changes occurred. Each sample includes:
 
-A base é composta por pares bitemporais de imagens Sentinel-2, adquiridos em dois instantes de tempo distintos, com resolução espacial de 10 metros. As imagens são acompanhadas de máscaras binárias que indicam as regiões onde ocorreram mudanças associadas à atividade mineradora. Cada amostra contém:
+- One image at time **T1** (year **2017**)  
+- One image at time **T2** (year **2024**)  
+- A **binary change mask**
 
-- Uma imagem no tempo **T1** (ano de **2017**)
-- Uma imagem no tempo **T2** (ano de **2024**)
-- Uma **máscara binária de mudança**
+## 🗂 Dataset Structure
 
-## Estrutura da Base de Dados
+The `CHANGE-MINING2025` dataset is organized as follows:
 
-A base de dados `CHANGE-MINING2025` está organizada da seguinte forma:
+- 📁 **T1/**: Images from the first time point (2017)  
+- 📁 **T2/**: Images from the second time point (2024)  
+- 📁 **Change/**: Binary reference masks (`0` = no change, `1` = change)
 
+Each sample contains a pair of multispectral Sentinel-2 images with **10-meter spatial resolution**, captured at two different times (**T1** and **T2**), along with a **binary mask** identifying areas with evidence of **mining activity over time**.
 
-Cada amostra é composta por um par de imagens multiespectrais Sentinel-2 com resolução espacial de **10 metros**, capturadas em dois instantes distintos (**T1** e **T2**), além de uma **máscara binária** que identifica as áreas com indícios de **atividade mineradora** ao longo do tempo.
+## 🛠️ Creation Process
 
-📁 **T1/**: Contém as imagens do primeiro instante de tempo (2017)  
-📁 **T2/**: Contém as imagens do segundo instante de tempo (2024)  
-📁 **Mudança/**: Máscaras binárias de referência (0 = sem mudança, 1 = mudança)
+The dataset was built through the following steps:
 
+1. **Image acquisition** from Sentinel-2 via the [Copernicus Browser](https://browser.dataspace.copernicus.eu/)  
+2. **Temporal selection** of the years **2017 (T1)** and **2024 (T2)**, with computation of the **SAVI spectral index** for each image  
+3. **Change computation** by subtracting SAVI indices (T2 - T1), followed by **manual refinement** of the identified regions  
+4. **Generation of the change mask**, with binary values:  
+   - `0` = No change  
+   - `1` = Change  
+5. **Image cropping** into **128 × 128 pixel** patches using **QGIS**  
+6. **Final organization** of the dataset into the three folders: `T1/`, `T2/`, and `Change/`
 
+## 🚀 Applications
 
-### 🛠️ Processo de Criação
+The CHANGE-MINING2025 dataset is ideal for:
 
-O processo de elaboração da base envolveu as seguintes etapas:
-
-1. **Aquisição das imagens** do Sentinel-2 através da plataforma [Copernicus Browser](https://browser.dataspace.copernicus.eu/).
-2. **Seleção temporal** dos anos **2017 (T1)** e **2024 (T2)**, com cálculo do índice espectral **SAVI** para cada instante.
-3. **Cálculo da mudança**, por meio da subtração dos índices SAVI (T2 - T1), seguido de **refinamento manual** das regiões alteradas.
-4. **Geração da máscara de mudança**, com valores binários:
-   - `0` = Sem alteração
-   - `1` = Com alteração
-5. **Recorte das imagens** em blocos de **128 × 128 pixels** utilizando o software **QGIS**.
-6. **Organização final** da base nas três pastas: `T1/`, `T2/` e `Mudança/`.
-
-## 🚀 Aplicações
-
-A base de dados CHANGE-MINING2025 é ideal para:
-
-- Modelos de **detecção de mudanças** com redes neurais profundas
-- Estudos de **uso e ocupação do solo** com foco em mineração
+- Training **deep learning models for change detection**  
+- Land use and land cover studies focused on **mining activities**
 
 ---
 
-📌 *Para mais informações, consulte a publicação associada ou entre em contato com os autores do projeto.*
+📌 *For more information, please refer to the associated publication or contact the project authors.*
