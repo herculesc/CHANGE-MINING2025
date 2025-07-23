@@ -6,6 +6,8 @@
 
 **CHANGE-MINING2025** is a dataset developed for **change detection tasks in mining areas**, focusing on **remote sensing** and **deep learning** applications.
 
+> **Authors:** Hércules C. S. Pereira, Valdivino A. Santiago Júnior, Elcio H. Shiguemori
+
 ## 📦 Download
 
 You can access and download the dataset via the link below:
