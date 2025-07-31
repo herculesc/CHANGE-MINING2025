@@ -52,6 +52,26 @@ The CHANGE-MINING2025 dataset is ideal for:
 - Training **deep learning models for change detection**  
 - Land use and land cover studies focused on **mining activities**
 
+## 📄 License
+
+The **CHANGE-MINING2025** dataset is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format  
+- **Adapt** — remix, transform, and build upon the material  
+
+**Under the following terms:**
+
+- 📌 **Attribution** — You must give appropriate credit to the authors:  
+  Hércules C. S. Pereira, Valdivino A. Santiago Júnior, Elcio H. Shiguemori  
+  Suggested citation:  
+  > *CHANGE-MINING2025: A Dataset for Change Detection in Mining Areas Using Sentinel-2 Images (2017–2024)*
+
+- 🚫 **NonCommercial** — Use is not permitted for commercial purposes.  
+
+Full legal text available at: [https://creativecommons.org/licenses/by-nc/4.0/legalcode](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
+
 ---
 
 📌 *For more information, please refer to the associated publication or contact the project authors.*
